@@ -7,3 +7,21 @@
   padding: 30px 0;
   margin-top: 50px;
 }
+
+.new-codename {
+  font-size: 2em;
+}
+
+.old-codename {
+  color: lightgrey;
+  transition-property: font-size;
+  transition-duration: 1s;
+  font-size: 1em;
+}
+
+.old-codename:hover {
+  color: black;
+  transition-property: font-size;
+  transition-duration: 1s;
+  font-size: 2em;
+}

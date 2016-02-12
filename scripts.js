@@ -17,6 +17,7 @@
       generatorForm: $('form#codename-generator'),
       generateBtn: $('[name=generate]'),
       wdiPrefix: $('[name=wdi-prefix]'),
+      newCodenameContainer: $('.new-codename-container'),
       newCodenameElement: $('#new-codename')
     }
 
@@ -66,12 +67,17 @@
         var codename = '';
         e.preventDefault();
         Codename.generateCodename().then(function( codename ) {
+          Codename.UI.hideOldCodenames();
           Codename.UI.renderNewCodename( codename );
         });
       });
     },
     renderNewCodename: function( codename ) {
-      fields.newCodenameElement.text( codename );
+      var newCodename = $('<h3>').text( codename ).addClass('new-codename');
+      fields.newCodenameContainer.prepend(newCodename)
+    },
+    hideOldCodenames: function() {
+      $('.new-codename').removeClass('new-codename').addClass('old-codename');
     }
   }
 }( window.Codename = window.Codename || {}, jQuery));
@@ -85,7 +91,7 @@
     var words = words || 1;
     var def = $.Deferred();
 
-    $.getJSON('http://www.shakeitspeare.com/api/sentence?markov='+markov).done(function( data ) {
+    $.getJSON('http://www.shakeitspeare.com/api/sentence?markov=' + markov).done(function( data ) {
       var sentence = data.sentence.replace('.', '').split(' ');
       var temp = [];
 
