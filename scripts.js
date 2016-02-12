@@ -33,10 +33,6 @@
         var codenameString = prefix + ' ' + poem1 + ' ' + Codename.Util.getRandomString() + '    -     Codename: ' + poem2 + ' ' + Codename.Util.getRandomString();
         def.resolve(codenameString);
     })
-
-    ShakeItspeare.getWords(3, 1).then(function( poemWords ) {
-
-    })
     return def.promise();
   }
 
@@ -44,7 +40,6 @@
     getRandomString: function() {
       var cat = Codename.Util.getRandomCategory();
       var sub = Codename.Util.getRandomSubCategory( cat );
-      console.log(sub);
       return faker[cat][sub]();
     },
     getRandomCategory: function() {
