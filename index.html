@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.0.1/faker.min.js" charset="utf-8"></script>
+    <script src="scripts.js" charset="utf-8"></script>
+    <title>Codename</title>
+  </head>
+  <body>
+    <header>
+      <h1>Codename</h1>
+    </header>
+    <div class="contianer-fluid">
+      <div class="row">
+        <div class="col-md-2">
+          &nbsp
+        </div>
+        <div class="col-md-8">
+          <div class="generator-container">
+            <form id="codename-generator">
+              <input type="text" name="wdi-prefix" value="WDI " placeholder="Cohort name prefix">
+              <button type="submit" name="generate">Generate</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-2">
+          &nbsp
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          &nbsp
+        </div>
+        <div class="col-md-8">
+          <div class="new-codename-container">
+            <h3 id="new-codename"><!-- New Codename --></h3>
+          </div>
+        </div>
+        <div class="col-md-2">
+          &nbsp
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(function() {
+        Codename.init();
+      });
+    </script>
+  </body>
+</html>
