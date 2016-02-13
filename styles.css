@@ -1,3 +1,11 @@
+body {
+  font-family: 'Roboto Condensed', Arial, serif, cursive;
+}
+
+header {
+  padding: 10px;
+}
+
 .generator-container {
   text-align: center;
 }
@@ -6,6 +14,8 @@
   text-align: center;
   padding: 30px 0;
   margin-top: 50px;
+  max-height: 400px;
+  overflow: scroll;
 }
 
 .new-codename {
@@ -24,4 +34,28 @@
   transition-property: font-size;
   transition-duration: 1s;
   font-size: 2em;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: lightgrey;
+}
+
+.andrew-attribution {
+  font-family: 'Pinyon Script', Arial, serif, cursive;
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    text-align: center;
+  }
+
+  .new-codename-container {
+    max-height: 300px;
+  }
 }
